@@ -5,7 +5,7 @@ public class circular {
 
     public circular(int capacidade) {
         if (capacidade <= 0) {
-            throw new IllegalArgumentException("A capacidade deve ser positiva");
+            throw new IllegalArgumentException("capacidade deve ser positiva");
         }
         dados = new int[capacidade];
         inicio = 0;
@@ -22,7 +22,7 @@ public class circular {
 
     public void insere(int elemento) {
         if (cheia()) {
-            throw new IllegalStateException("Fila cheia");
+            throw new IllegalStateException("fila cheia");
         }
         int fim = (inicio + quantidade) % dados.length;
         dados[fim] = elemento;
@@ -31,7 +31,7 @@ public class circular {
 
     public int remove() {
         if (vazia()) {
-            throw new IllegalStateException("Fila vazia");
+            throw new IllegalStateException("fila vazia");
         }
         int elemento = dados[inicio];
         inicio = (inicio + 1) % dados.length;
@@ -41,14 +41,14 @@ public class circular {
 
     public int primeiro() {
         if (vazia()) {
-            throw new IllegalStateException("Fila vazia");
+            throw new IllegalStateException("fila vazia");
         }
         return dados[inicio];
     }
 
     public int ultimo() {
         if (vazia()) {
-            throw new IllegalStateException("Fila vazia");
+            throw new IllegalStateException("fila vazia");
         }
         int indice = (inicio + quantidade - 1) % dados.length;
         return dados[indice];
