@@ -1,22 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("RA1 A - Fila circular");
+        System.out.println("RA1 A - fila circular");
         circular fila = new circular(3);
-        System.out.println("Vazia inicialmente: " + fila.vazia());
+        System.out.println("vazia inicialmente: " + fila.vazia());
         fila.insere(12);
         fila.insere(35);
         fila.insere(52);
-        System.out.println("Cheia: " + fila.cheia());
-        System.out.println("Removido: " + fila.remove());
+        System.out.println("cheia: " + fila.cheia());
+        System.out.println("removido: " + fila.remove());
         fila.insere(64);
-        System.out.println("Primeiro: " + fila.primeiro());
-        System.out.println("Ultimo: " + fila.ultimo());
+        System.out.println("primeiro: " + fila.primeiro());
+        System.out.println("ultimo: " + fila.ultimo());
         while (!fila.vazia()) {
             System.out.println(fila.remove());
         }
-        System.out.println("Vazia no final: " + fila.vazia());
+        System.out.println("vazia no final: " + fila.vazia());
 
-        System.out.println("RA1 B - Merge");
+        System.out.println("RA1 B - merge");
         circular a = new circular(4);
         circular b = new circular(5);
         a.insere(12);
@@ -29,7 +29,7 @@ public class Main {
         b.insere(55);
         b.insere(75);
         circular r = circular.merge(a, b);
-        System.out.print("Resultado: ");
+        System.out.print("resultado: ");
         while (!r.vazia()) {
             System.out.print(r.remove() + " ");
         }
